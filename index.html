@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Managament</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    
+    <div class="container">
+      <header>
+
+        <h3>Products</h3>
+        
+        
+          <input type="text" name="searchBar" id = "searchBar" placeholder="Search for a product">
+        
+      </header>
+      <div class="table-wrapper">
+        <table id= 'tableproducts' class="table-products">
+          <tbody>
+            <tr>
+              <th>Product Code</th>
+              <th>Product Name</th>
+              <th>Category Name</th>
+              <th>Brand Name</th>
+              <th>Product Price</th>
+              <th>Action</th>
+            </tr>
+            </tbody>
+        </table>
+        
+
+        <button class="btn add">Add Product</button>
+      </div>
+
+      <div class="add-modal modal-wrapper">
+        <div class="modal">
+          <div class="modal-header"><h3>Add New Product</h3></div>
+          <div class="modal-body">
+            <form class="form" autocomplete="off">
+              <input
+                type="text"
+                name="productCode"
+                placeholder="Product Code"
+              />
+              <input
+                type="text"
+                name="productName"
+                placeholder="Product Name"
+              />
+              <input
+                type="text"
+                name="categoryName"
+                placeholder="Category Name"
+              />
+              <input type="text" name="brandName" placeholder="Brand Name" />
+              <input
+                type="number"
+                name="productPrice"
+                placeholder="Product Price"
+              />
+              <button class="btn btn-modal">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="edit-modal modal-wrapper">
+        <div class="modal">
+          <div class="modal-header"><h3>Edit Product</h3></div>
+          <div class="modal-body">
+            <form class="form" autocomplete="off">
+              <input
+                type="text"
+                name="productCode"
+                placeholder="Product Code"
+              />
+              <input
+                type="text"
+                name="productName"
+                placeholder="Product Name"
+              />
+              <input
+                type="text"
+                name="categoryName"
+                placeholder="Category Name"
+              />
+              <input type="text" name="brandName" placeholder="Brand Name" />
+              <input
+                type="number"
+                name="productPrice"
+                placeholder="Product Price"
+              />
+              <button class="btn btn-modal">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBG9ny6f2Icdm-6qiLqmv_wCg3jNT8p2Ns",
+    authDomain: "urunyonetimi-64852.firebaseapp.com",
+    databaseURL: "https://urunyonetimi-64852-default-rtdb.firebaseio.com",
+    projectId: "urunyonetimi-64852",
+    storageBucket: "urunyonetimi-64852.appspot.com",
+    messagingSenderId: "142567088115",
+    appId: "1:142567088115:web:d20ce393145118e7253c86",
+    measurementId: "G-TFB2W5WNLT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
